@@ -26,8 +26,8 @@
         }
 
         .navbar {
-            position: absolute;
-            top: 0;
+            position: relative; /* Changed from absolute */
+            margin-bottom: 20px; /* Space between navbar and band name */
             width: 100%;
             display: flex;
             justify-content: center;
@@ -37,13 +37,14 @@
         }
 
         .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
         }
 
-        .navbar a:hover {
-            color: #00ffcc;
+        .navbar img {
+            width: 100%;
+            height: auto;
         }
 
         .content {
@@ -73,10 +74,10 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-        <a href="https://spotify.com" target="_blank">Spotify</a>
-        <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://instagram.com" target="_blank"><img src="imageInstagram" alt="Instagram"></a>
+        <a href="https://spotify.com" target="_blank"><img src="imageSpotify" alt="Spotify"></a>
+        <a href="https://soundcloud.com" target="_blank"><img src="imageSoundCloud" alt="SoundCloud"></a>
+        <a href="https://youtube.com" target="_blank"><img src="imageYouTube" alt="YouTube"></a>
     </div>
 
     <div class="background">
