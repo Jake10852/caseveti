@@ -26,26 +26,26 @@
         }
 
         .navbar {
-            position: relative;
-            margin-top: 20px; /* Space above the navbar */
+            position: fixed;
+            top: 0;
             width: 100%;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.7);
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.5);
+            gap: 25px;
+            z-index: 100;
+        }
+        
+        .navbar a img {
+            width: 50px;
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar a img:hover {
+            transform: scale(1.1);
         }
 
-        .navbar a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-        }
-
-        .navbar img {
-            width: 100%;
-            height: auto;
-        }
 
         .content {
             margin-top: 20px; /* Space below the navbar */
