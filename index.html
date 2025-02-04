@@ -56,6 +56,9 @@
         
         .navbar a img {
             width: 50px;
+            height: 50px; /* Ensure the image is square */
+            border-radius: 50%; /* Round the corners */
+            object-fit: cover; /* Remove any white space by ensuring the image fills the container */
             transition: transform 0.3s ease;
         }
         
