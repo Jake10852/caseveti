@@ -13,6 +13,22 @@
             text-align: center;
         }
 
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5em;
+            }
+        
+            .email-signup form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        
+            .email-signup input[type="email"],
+            .email-signup button {
+                width: 100%;
+            }
+        }        
+
         .background {
             position: relative;
             height: 100vh;
