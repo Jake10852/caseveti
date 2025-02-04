@@ -225,6 +225,24 @@
             margin-top: 10px;
         }
 
+        /* Slideshow styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
     </style>
 </head>
 <body>
@@ -246,13 +264,20 @@
         <h2>Contact Us</h2>
         <p>Want to book us or get in touch? Email us at <a href="mailto:info@yourband.com">info@yourband.com</a>.</p>
     </div>
-
-    <div class="section photo-gallery">
-        <!-- Example photo placeholders, replace with actual images later -->
-        <img src="image1.jpg" alt="Gallery Image 1">
-        <img src="image2.jpg" alt="Gallery Image 2">
-        <img src="image3.jpg" alt="Gallery Image 3">
-        <img src="image4.jpg" alt="Gallery Image 4">
+    
+    <!-- Slideshow Section -->
+    <div class="section slideshow">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="image1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="image2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="image3.jpg" alt="Slide 3">
+            </div>
+        </div>
     </div>
 
     <div class="section email-signup">
@@ -278,6 +303,24 @@
             </div>
         </form>
     </div>
+
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+        showSlides(); // Initialize slideshow
+    </script>
 
     
 </body>
