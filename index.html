@@ -153,6 +153,78 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
+
+        /* Styling for the mailing list section */
+        .email-signup {
+            background-color: rgba(0, 0, 0, 0.7); /* Slight dark background */
+            padding: 40px 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Title styling */
+        .email-signup h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        /* Form input styling */
+        .mc-field-group {
+            margin-bottom: 15px;
+        }
+        
+        .mc-field-group label {
+            display: block;
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .mc-field-group input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #00ffcc;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            outline: none;
+        }
+        
+        .mc-field-group input[type="email"]:focus {
+            border-color: #00cca3;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        /* Submit button styling */
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #00ffcc;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #00cca3;
+        }
+        
+        /* Small note about required fields */
+        .indicates-required {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -169,25 +241,27 @@
     </div>
 
     <div class="section email-signup">
-       <form action="https://caseveti.us10.list-manage.com/subscribe/post?u=d1e2639f6151168b749b38c43&amp;id=fb26be332a&amp;f_id=0085a4e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-        <div id="mc_embed_signup_scroll"><h2>Sign up to our mailing list!</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_d1e2639f6151168b749b38c43_fb26be332a" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-           </div>
-        </div>
-    </div>
-</form>
+        <form action="https://caseveti.us10.list-manage.com/subscribe/post?u=d1e2639f6151168b749b38c43&amp;id=fb26be332a&amp;f_id=0085a4e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <div id="mc_embed_signup_scroll">
+                <h2>Sign up to our mailing list!</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" placeholder="Enter your email" value="">
+                </div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <!-- real people should not fill this in and expect good things -->
+                    <input type="text" name="b_d1e2639f6151168b749b38c43_fb26be332a" tabindex="-1" value="">
+                </div>
+                <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                </div>
+            </div>
+        </form>
     </div>
 
     <div class="section">
