@@ -141,18 +141,19 @@
 
         .photo-gallery {
             display: flex;
-            justify-content: center;
+            overflow-x: auto;
             gap: 20px;
-            flex-wrap: wrap;
             padding: 50px 20px;
+            justify-content: start; /* Ensure items align to the left */
         }
-
+        
         .photo-gallery img {
             width: 300px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
+
 
         /* Styling for the mailing list section */
         .email-signup {
