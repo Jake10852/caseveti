@@ -14,15 +14,13 @@
         }
 
         .background {
-            background-image: url('band2.JPG');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh; /* Full viewport height */
+            position: relative;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align content to the top */
+            justify-content: center;
             align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('band2.JPG') center/cover no-repeat;
         }
 
         .navbar {
@@ -56,13 +54,16 @@
         }
 
         .content h1 {
-            font-size: 3em; /* Bigger font */
+            font-size: 4em;
             font-weight: bold;
-            color: #f0f0f0; /* Off-white font color */
-            -webkit-text-stroke: 2px #000; /* Solid black border around text */
-            text-stroke: 2px #000; /* Solid black border around text */
+            color: #ffffff;
+            -webkit-text-stroke: 2px #000;
+            animation: fadeIn 1.5s ease-in-out;
         }
-
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         .section {
             padding: 50px 20px;
             background: rgba(0, 0, 0, 0.7);
