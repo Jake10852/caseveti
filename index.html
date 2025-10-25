@@ -48,15 +48,17 @@
         }
 
         .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 50px;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: flex-end;
-            gap: 25px;
-            z-index: 100;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          max-width: 1400px;  /* limits how wide the bar’s content area is */
+          margin: 0 auto;     /* centers that area horizontally */
+          padding: 15px 50px;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          justify-content: flex-end;
+          gap: 25px;
+          z-index: 100;
         }
         
         .navbar a img {
