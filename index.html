@@ -51,18 +51,14 @@
           position: fixed;
           top: 0;
           width: 100%;
+          max-width: 1400px;  /* limits how wide the bar’s content area is */
+          margin: 0 auto;     /* centers that area horizontally */
+          padding: 15px 50px;
           background: rgba(0, 0, 0, 0.7);
           display: flex;
           justify-content: flex-end;
           gap: 25px;
-          padding: 15px 50px;
-          transition: top 0.4s ease; /* smooth slide animation */
           z-index: 100;
-        }
-        
-        /* hidden state */
-        .navbar.hidden {
-          top: -100px; /* moves it out of view */
         }
         
         .navbar a img {
@@ -432,21 +428,6 @@
         window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))
       }
     })();
-
-  let lastScrollY = window.scrollY;
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-      // Scrolling down → hide navbar
-      navbar.classList.add('hidden');
-    } else {
-      // Scrolling up → show navbar
-      navbar.classList.remove('hidden');
-    }
-    lastScrollY = window.scrollY;
-  });
-        
     </script>
 
     
