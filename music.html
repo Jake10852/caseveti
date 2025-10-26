@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caseveti - Music</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- or keep your styles in <style> -->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="https://www.instagram.com/caseveti/" target="_blank"><img src="instagramLogo.jpg" alt="Instagram"></a>
+    <a href="https://open.spotify.com/artist/4zC9ETLATVMvx4u4Havmmz?si=pGbVOsxTSEGQ_ZoZpRCBAA" target="_blank"><img src="d-1.png" alt="Spotify"></a>
+    <a href="https://youtube.com/@caseveti?si=BKMLj6JCYACP7Xf7" target="_blank"><img src="download.png" alt="Youtube"></a>
+    <a href="https://www.tiktok.com/@caseveti?is_from_webapp=1&sender_device=pc" target="_blank"><img src="tiktoklogo.png" alt="Tiktok"></a>
+  </div>
+
+  <!-- Hamburger -->
+  <span class="hamburger" onclick="toggleNav()">☰</span>
+
+  <!-- Side navigation -->
+  <div id="sideNavbar" class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="music.html" class="active">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="tour.html">Tour</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Music content -->
+  <div class="section">
+    <h1>Our Music</h1>
+    <p>Check out our latest tracks below:</p>
+
+    <!-- Example Spotify embed -->
+    <iframe style="border-radius: 0px;" src="https://open.spotify.com/embed/track/2xdVuD77YwURTiCxEiNcc4?utm_source=generator&theme=0" width="100%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <!-- You can add more tracks here -->
+  </div>
+
+  <script src="script.js"></script> <!-- optional: if you moved JS to a separate file -->
+</body>
+</html>
