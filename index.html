@@ -281,7 +281,54 @@
             filter: grayscale(50%);
         }
 
-
+              /* Side nav container */
+              .side-nav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                top: 0;
+                right: 0; /* change to 'left: 0;' if you want it to slide in from the left */
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.3s ease;
+                padding-top: 60px;
+                z-index: 1000;
+              }
+            
+              /* Nav links inside */
+              .side-nav a {
+                padding: 10px 30px;
+                text-decoration: none;
+                color: #ccc;
+                display: block;
+                font-size: 18px;
+                transition: 0.3s;
+              }
+            
+              .side-nav a:hover {
+                color: white;
+              }
+            
+              /* Close (X) button */
+              .side-nav .close-btn {
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+              }
+            
+              /* Hamburger icon */
+              .hamburger {
+                font-size: 30px;
+                cursor: pointer;
+                color: white;
+                position: fixed;
+                top: 15px;
+                left: 20px; /* or right: 20px; depending on your design */
+                z-index: 1100;
+              }
 
         
     </style>
@@ -300,7 +347,18 @@
     </div>
   </div>
 
+<!-- Hamburger icon -->
+<span class="hamburger" onclick="openNav()">☰</span>
 
+<!-- Side navigation drawer -->
+<div id="sideNavbar" class="side-nav">
+  <span class="close-btn" onclick="closeNav()">&times;</span>
+  <a href="#home">Home</a>
+  <a href="#music">Music</a>
+  <a href="#videos">Videos</a>
+  <a href="#tour">Tour</a>
+  <a href="#contact">Contact</a>
+</div>
     <!-- Spotify Embed with changes -->
     <div class="spotify-player">
         <iframe style="border-radius: 0px;" src="https://open.spotify.com/embed/track/2xdVuD77YwURTiCxEiNcc4?utm_source=generator&theme=0" width="100%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -428,6 +486,13 @@
         window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))
       }
     })();
+        function openNav() {
+  document.getElementById("sideNavbar").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sideNavbar").style.width = "0";
+}
     </script>
 
     
