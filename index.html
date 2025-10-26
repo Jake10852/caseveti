@@ -50,29 +50,31 @@
         .navbar {
           position: fixed;
           top: 0;
+          left: 0;
           width: 100%;
-          max-width: 1400px;  /* limits how wide the bar’s content area is */
-          margin: 0 auto;     /* centers that area horizontally */
+          max-width: 1400px;
+          margin: 0 auto;
           padding: 15px 50px;
           background: rgba(0, 0, 0, 0.7);
           display: flex;
-          justify-content: flex-end;
+          justify-content: center; /* Center icons horizontally */
+          align-items: center;
           gap: 25px;
           z-index: 100;
         }
         
         .navbar a img {
-            width: 50px;
-            height: 50px; /* Ensure the image is square */
-            border-radius: 50%; /* Round the corners */
-            border: 3px solid white; /* Adjust thickness as needed */
-            object-fit: cover; /* Remove any white space by ensuring the image fills the container */
-            transition: transform 0.3s ease;
-            filter: none !important;
+          width: 50px;
+          height: 50px; /* Make image square */
+          border-radius: 50%; /* Round shape */
+          border: 3px solid white;
+          object-fit: cover; /* Fill container */
+          transition: transform 0.3s ease;
+          filter: none !important;
         }
         
         .navbar a img:hover {
-            transform: scale(1.1);
+          transform: scale(1.1);
         }
 
 
@@ -322,12 +324,20 @@
 </head>
 <body>
   <div class="background">
-    <div class="navbar">
-      <a href="https://www.instagram.com/caseveti/" target="_blank"><img src="instagramLogo.jpg" alt="Instagram"></a>
-      <a href="https://open.spotify.com/artist/4zC9ETLATVMvx4u4Havmmz?si=pGbVOsxTSEGQ_ZoZpRCBAA" target="_blank"><img src="d-1.png" alt="Spotify"></a>
-      <a href="https://youtube.com/@caseveti?si=BKMLj6JCYACP7Xf7" target="_blank"><img src="download.png" alt="Youtube"></a>
-      <a href="https://www.tiktok.com/@caseveti?is_from_webapp=1&sender_device=pc" target="_blank"><img src="tiktoklogo.png" alt="Tiktok"></a>
-    </div>
+        <div class="navbar">
+          <a href="https://www.instagram.com/caseveti/" target="_blank">
+            <img src="instagramLogo.jpg" alt="Instagram">
+          </a>
+          <a href="https://open.spotify.com/artist/4zC9ETLATVMvx4u4Havmmz?si=pGbVOsxTSEGQ_ZoZpRCBAA" target="_blank">
+            <img src="d-1.png" alt="Spotify">
+          </a>
+          <a href="https://youtube.com/@caseveti?si=BKMLj6JCYACP7Xf7" target="_blank">
+            <img src="download.png" alt="Youtube">
+          </a>
+          <a href="https://www.tiktok.com/@caseveti?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="tiktoklogo.png" alt="Tiktok">
+          </a>
+        </div>
 
     <div class="content">
       <h1></h1>  
