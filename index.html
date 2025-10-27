@@ -359,7 +359,21 @@
           }
         }
 
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%); /* centers image slightly above middle */
+  z-index: 1; /* sits above background but below logo/text */
+  width: 80%; /* scale as needed */
+  max-width: 1000px;
+  opacity: 0.8; /* makes overlay blend with background */
+}
 
+.overlay-image img {
+  width: 100%;
+  height: auto;
+}
 
               
     </style>
