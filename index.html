@@ -364,18 +364,18 @@
   max-width: 70%;
   height: auto;
   display: block;
-  position: relative;        /* keeps it in normal flow but allows top adjustment */
-  top: 20px;                 /* moves it down slightly below navbar */
-  margin: 0 auto;            /* horizontal centering */
+  position: relative;
+  margin: 0 auto;
   filter: brightness(0) invert(1);
   border: none;
   box-shadow: none;
+  top: calc(50px + 15px); /* navbar height + padding */
 }
 
 @media (max-width: 768px) {
   .band-logo {
     width: 180px;
-    top: 15px;  /* slightly less space on mobile */
+    top: calc(40px + 10px); /* smaller navbar on mobile + spacing */
   }
 }
               
