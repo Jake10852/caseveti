@@ -360,18 +360,18 @@
         }
 
 .band-logo {
-  width: 350px;
-  max-width: 80%;
+  width: 250px;        /* smaller width */
+  max-width: 70%;      /* responsive on mobile */
   height: auto;
-  margin-bottom: 20px;
-  filter: brightness(0) invert(1);
+  display: block;      /* ensures it’s treated as a block element */
+  margin: 0 auto 20px auto; /* centers it horizontally, adds bottom spacing */
+  filter: brightness(0) invert(1); /* keep white visible on dark background */
   animation: fadeIn 1.5s ease forwards;
-  display: block;
 }
 
 @media (max-width: 768px) {
   .band-logo {
-    width: 220px;
+    width: 180px;      /* smaller on mobile */
   }
 }
               
