@@ -318,7 +318,50 @@
             left: 20px;
             z-index: 1100; /* stays above the sidebar */
 
+
+        /* Latest Single Section Styling */
+        .latest-single {
+          padding: 50px 20px;
+          background: rgba(0, 0, 0, 0.7);
+          text-align: center;
+        }
         
+        .latest-single h2 {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 3em;
+          color: white;
+          margin-bottom: 20px;
+        }
+        
+        /* Make Spotify iframe responsive */
+        .spotify-container {
+          position: relative;
+          width: 100%;
+          max-width: 700px; /* optional max width */
+          margin: 0 auto;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        
+        .spotify-container iframe {
+          width: 100%;
+          height: 380px; /* desktop default */
+        }
+        
+        /* Mobile adjustments */
+        @media screen and (max-width: 600px) {
+          .latest-single h2 {
+            font-size: 2em;
+          }
+          
+          .spotify-container iframe {
+            height: 300px; /* smaller height on mobile */
+          }
+        }
+
+
+
+              
     </style>
 </head>
 <body>
@@ -357,6 +400,26 @@
 
 
 
+        <!-- Latest Single Section -->
+    <div class="section latest-single">
+      <h2>Listen to Our Latest Single</h2>
+      <div class="spotify-container">
+        <iframe 
+          src="https://open.spotify.com/embed/track/YOUR_TRACK_ID_HERE?utm_source=generator&theme=0" 
+          width="100%" 
+          height="380" 
+          frameborder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+
+
+
+
+    
     <div class="section email-signup">
         <form action="https://caseveti.us10.list-manage.com/subscribe/post?u=d1e2639f6151168b749b38c43&amp;id=fb26be332a&amp;f_id=0085a4e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
             <div id="mc_embed_signup_scroll">
