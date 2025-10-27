@@ -89,12 +89,16 @@
         }
 
 
-        .content {
-            background: none; /* Remove background */
-            padding: 0; /* Remove padding if needed */
-            border-radius: 0; /* Remove any rounded corners */
-        }
-
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering if you want */
+  align-items: center;     /* horizontal centering */
+  height: auto;            /* allow it to wrap around logo */
+  padding-top: 50px;       /* optional spacing from top */
+  text-align: center;      /* fallback centering */
+  background: none;        /* make sure no background covers it */
+}
 
         .content h1 {
             font-family: 'Bebas Neue', sans-serif;
@@ -360,13 +364,14 @@
         }
 
 .band-logo {
-  width: 250px;        /* smaller width */
-  max-width: 70%;      /* responsive on mobile */
+  width: 220px;          /* smaller size */
+  max-width: 70%;        /* responsive */
   height: auto;
-  display: block;      /* ensures it’s treated as a block element */
-  margin: 0 auto 20px auto; /* centers it horizontally, adds bottom spacing */
-  filter: brightness(0) invert(1); /* keep white visible on dark background */
-  animation: fadeIn 1.5s ease forwards;
+  display: block;        /* ensures it behaves like a block */
+  margin: 0 auto;        /* horizontally centers */
+  filter: brightness(0) invert(1); /* keep it visible on dark background */
+  border: none;          /* remove any borders */
+  box-shadow: none;      /* remove any shadow */
 }
 
 @media (max-width: 768px) {
