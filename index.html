@@ -359,47 +359,7 @@
           }
         }
 
-.overlay-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -30%); /* centers image slightly above middle */
-  z-index: 1; /* sits above background but below logo/text */
-  width: 80%; /* scale as needed */
-  max-width: 1000px;
-  opacity: 0.8; /* makes overlay blend with background */
-}
 
-.overlay-image img {
-  width: 100%;
-  height: auto;
-}
-
-
-              .logo-container {
-  margin-top: 100px; /* pushes logo below navbar */
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  position: relative;
-}
-
-.logo-container img {
-  width: 180px; /* adjust as needed */
-  height: auto;
-  filter: brightness(0) invert(1); /* makes dark logos white if needed */
-  transition: transform 0.3s ease;
-}
-
-.logo-container img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 600px) {
-  .logo-container img {
-    width: 130px;
-  }
-}
               
     </style>
 </head>
@@ -424,13 +384,7 @@
 
 
       
-        <div class="logo-container">
-              <img src="Caseveti_Logo_White.png.png" alt="Caseveti Logo">
-            </div>
-        
-            <div class="overlay-image">
-              <img src="overlayBand.png" alt="Band Overlay">
-            </div>
+
             <div class="content">
               <h1></h1>  
             </div>
