@@ -318,6 +318,28 @@
             left: 20px;
             z-index: 1100; /* stays above the sidebar */
 
+
+
+
+            .spotify-player {
+              width: 100%;
+              max-width: 700px;  /* optional max width on large screens */
+              margin: 0 auto;
+            }
+            
+            .spotify-player iframe {
+              width: 100%;
+              height: 380px;      /* desktop height */
+              border: none;
+            }
+            
+            @media screen and (max-width: 600px) {
+              .spotify-player iframe {
+                height: 300px;    /* smaller player height for mobile */
+              }
+            }
+
+              
         
     </style>
 </head>
@@ -358,9 +380,16 @@
 
 
     
-    <!-- Spotify Embed with changes -->
     <div class="spotify-player">
-        <iframe style="border-radius: 0px;" src="https://open.spotify.com/embed/track/2xdVuD77YwURTiCxEiNcc4?utm_source=generator&theme=0" width="100%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe
+        src="https://open.spotify.com/embed/playlist/28N2M1mmYd8WVIUeEF2FqA?utm_source=generator&theme=0"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
     </div>
 
 
