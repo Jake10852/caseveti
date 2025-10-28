@@ -283,31 +283,49 @@
             filter: grayscale(50%);
         }
 
-        .side-nav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0; /* now opens from the left */
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.3s ease;
-            padding-top: 60px;
-            z-index: 1000;
-          }
-        
-          .side-nav a {
-            padding: 10px 30px;
-            text-decoration: none;
-            color: #ccc;
-            display: block;
-            font-size: 18px;
-            transition: 0.3s;
-          }
-        
-          .side-nav a:hover {
-            color: white;
-          }
+/* Side Navigation Styling */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+  font-family: 'Bebas Neue', sans-serif; /* match your headings */
+}
+
+.side-nav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.side-nav a:hover {
+  color: #00ffcc;              /* accent color on hover */
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #00ffcc; /* glow effect */
+}
+
+.side-nav a.active {
+  color: #ffffff;              /* white for active */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* strong white glow */
+}
+
+@media screen and (max-width: 600px) {
+  .side-nav a {
+    font-size: 22px;           /* slightly bigger text on mobile */
+    padding: 12px 20px;
+  }
+}
         
           /* Hamburger icon */
           .hamburger {
