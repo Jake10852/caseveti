@@ -355,30 +355,39 @@
           margin-bottom: 20px;
         }
         
-/* --- Latest Release Section --- */
 .release-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0e0b09; /* deep brown-black background */
+  background-color: #0e0b09; /* deep brown-black */
   color: #e8e2da;
   padding: 80px 10%;
-  gap: 60px;
+  gap: 60px; /* space between image and text */
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.release-image {
+  flex: 1 1 400px; /* grow, shrink, base width */
+  display: flex;
+  justify-content: center;
 }
 
 .release-image img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .release-text {
+  flex: 1 1 400px;
   max-width: 500px;
   line-height: 1.6;
   font-size: 1rem;
 }
 
+/* Stream button styling */
 .stream-button {
   display: inline-block;
   margin-top: 20px;
@@ -394,17 +403,17 @@
   color: #0e0b09;
 }
 
-/* --- Responsive layout for mobile --- */
+/* Mobile layout: stack vertically */
 @media (max-width: 768px) {
   .release-section {
-    flex-direction: column;
+    flex-direction: column; /* stack image on top of text */
     text-align: center;
     gap: 30px;
     padding: 60px 5%;
   }
 
   .release-image img {
-    width: 90%;
+    max-width: 90%;
   }
 }
         
