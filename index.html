@@ -355,28 +355,58 @@
           margin-bottom: 20px;
         }
         
-        .spotify-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          width: 100%;
-        }
-        
-        .spotify-container iframe {
-          width: 500px; /* adjust between 500–700px if you want wider/narrower */
-          height: 152px;
-          border-radius: 12px;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        
+/* --- Latest Release Section --- */
+.release-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0b09; /* deep brown-black background */
+  color: #e8e2da;
+  padding: 80px 10%;
+  gap: 60px;
+}
 
-        @media (max-width: 768px) {
-          .spotify-container iframe {
-            width: 90%;
-            height: 300px;
-          }
-        }
+.release-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.release-text {
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.stream-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  color: #e8e2da;
+  border: 1px solid #e8e2da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.stream-button:hover {
+  background-color: #e8e2da;
+  color: #0e0b09;
+}
+
+/* --- Responsive layout for mobile --- */
+@media (max-width: 768px) {
+  .release-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 60px 5%;
+  }
+
+  .release-image img {
+    width: 90%;
+  }
+}
         
 
 .band-logo {
@@ -440,20 +470,21 @@
 
 
 
-<!-- Latest Single Section -->
-<div class="section latest-single">
-  <h2>Listen to Our Latest Single</h2>
-  <div class="spotify-container">
-    <iframe
-      src="https://open.spotify.com/embed/track/741xaJpCPvzR6tfUZVUBkw"
-      frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
+<!-- Latest Release Section -->
+<section class="release-section">
+  <div class="release-image">
+    <img src="your-image-filename.jpg" alt="Album artwork">
   </div>
-</div>
-
-
+  <div class="release-text">
+    <p>
+      Our debut EP <strong>‘Siren’</strong> is out now. It’s been four years in the making, playing empty rooms, refining our set and landing on these five songs. 
+      This EP was not written to be sold nor was it sanitised in order to appeal — everything is from the heart and nothing came lightly. 
+      Thank you to everyone who’s been coming down to shows and spreading our name. 
+      We hope you find something in this body of work.
+    </p>
+    <a href="https://open.spotify.com/track/741xaJpCPvzR6tfUZVUBkw" target="_blank" class="stream-button">Stream Here</a>
+  </div>
+</section>
 
 
 
