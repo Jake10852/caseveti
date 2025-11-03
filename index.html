@@ -343,7 +343,7 @@
 
         /* Latest Single Section Styling */
         .latest-single {
-          padding: 50px 20px;
+          padding: 80px 0;
           background: rgba(0, 0, 0, 0.7);
           text-align: center;
         }
@@ -357,17 +357,17 @@
         
         /* Make Spotify iframe responsive */
         .spotify-container {
-          position: relative;
           width: 100%;
-          max-width: 700px; /* optional max width */
-          margin: 0 auto;
-          overflow: hidden;
+          max-width: 500px; /* tighter for desktop */
+          margin: 0 auto; /* centers it */
           border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
         
         .spotify-container iframe {
           width: 100%;
-          height: 380px; /* desktop default */
+          height: 152px; /* Spotify single embeds look best at ~150px tall */
         }
         
         /* Mobile adjustments */
