@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caseveti</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Caseveti - Official Band Website">
+    <meta property="og:description" content="Listen to Caseveti’s latest singles, watch videos, and get merch.">
+    <meta property="og:image" content="https://caseveti.co.uk/Caseveti_Logo_White.png">
+    <meta property="og:url" content="https://caseveti.co.uk">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.7); /* Same as slideshow background */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5em;
+            }
+        
+            .email-signup form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        
+            .email-signup input[type="email"],
+            .email-signup button {
+                width: 90%; /* Ensure it's not too wide */
+                max-width: 400px; /* Limit the width to a maximum value */
+                padding: 10px;
+            }
+        }
+   
+        
+        .background {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('band2.JPG') center/cover no-repeat;
+            filter: grayscale(100%);
+        }
+
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          justify-content: center; /* centers icons horizontally */
+          align-items: center;
+          gap: 25px;
+          padding: 15px 20px; /* reduced padding for better fit */
+          z-index: 100;
+        }
+        
+        .navbar a img {
+          width: 50px;
+          height: 50px; /* Make image square */
+          border-radius: 50%; /* Round shape */
+          border: 3px solid white;
+          object-fit: cover; /* Fill container */
+          transition: transform 0.3s ease;
+          filter: none !important;
+        }
+
+        /* ===== MOBILE RESPONSIVE STYLES ===== */
+        @media screen and (max-width: 600px) {
+          .navbar {
+            padding: 10px 10px; /* smaller padding */
+            gap: 15px;          /* smaller gap between icons */
+          }
+        
+          .navbar a img {
+            width: 40px;  /* smaller icons on mobile */
+            height: 40px;
+          }
+        }
+        
+        .navbar a img:hover {
+          transform: scale(1.1);
+        }
+
+
+        .content {
+            background: none; /* Remove background */
+            padding: 0; /* Remove padding if needed */
+            border-radius: 0; /* Remove any rounded corners */
+        }
+
+
+        .content h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 6.0rem;
+            font-weight: normal;
+            position: relative;
+            color: #ffffff;
+            -webkit-text-stroke: 2px #000;
+            top: -10px; /* Move it up */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center; /* Keep it centered */
+        }
+
+
+
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .section:nth-child(odd) {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .email-signup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .email-signup form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .email-signup input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            
+        }
+
+        .email-signup button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #00ffcc;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+        
+        .email-signup input:focus {
+            color: white !important;
+        }
+
+        .email-signup input:focus {
+            background-color: rgba(255, 255, 255, 0.2); /* Adjust as needed */
+            outline: none; /* Optional: Removes default browser outline */
+        }
+        
+        .email-signup button:hover {
+            background-color: #00cca3;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .photo-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 50px 20px;
+            justify-content: start; /* Ensure items align to the left */
+            filter: grayscale(100%);
+        }
+        
+        .photo-gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            filter: grayscale(100%);
+        }
+
+
+        .email-signup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('band2.JPG') center/cover no-repeat; /* Same background as body */
+            color: white; /* Adjust text color for contrast */
+            padding: 40px 20px;
+            margin-top: 0;
+            border-radius: 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        
+        /* Title styling */
+        .email-signup h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        /* Form input styling */
+        .mc-field-group {
+            margin-bottom: 15px;
+        }
+        
+        .mc-field-group label {
+            display: block;
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .mc-field-group input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            outline: none;
+        }
+
+        
+        .mc-field-group input[type="email"]:focus {
+            border-color: #00cca3;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        /* Submit button styling */
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #ddd; /* Light grey button */
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #bbb; /* Darker grey on hover */
+        }
+
+
+        
+        /* Small note about required fields */
+        .indicates-required {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            filter: grayscale(50%);
+        }
+
+/* Side Navigation Styling */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+  font-family: 'Bebas Neue', sans-serif; /* match your headings */
+}
+
+.side-nav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.side-nav a:hover {
+  color: #00ffcc;              /* accent color on hover */
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #00ffcc; /* glow effect */
+}
+
+.side-nav a.active {
+  color: #ffffff;              /* white for active */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* strong white glow */
+}
+
+@media screen and (max-width: 600px) {
+  .side-nav a {
+    font-size: 22px;           /* slightly bigger text on mobile */
+    padding: 12px 20px;
+  }
+}
+        
+          /* Hamburger icon */
+          .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            z-index: 1100; /* stays above the sidebar */
+
+
+        /* --- FIXED Spotify Section --- */
+        .latest-single {
+          padding: 80px 0;
+          background: rgba(0, 0, 0, 0.7);
+          text-align: center;
+        }
+                
+        .latest-single h2 {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 3em;
+          color: white;
+          margin-bottom: 20px;
+        }
+        
+.release-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0b09; /* deep brown-black */
+  color: #e8e2da;
+  padding: 80px 10%;
+  gap: 60px; /* space between image and text */
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.release-image {
+  flex: 1 1 400px; /* grow, shrink, base width */
+  display: flex;
+  justify-content: center;
+}
+
+.release-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.release-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Stream button styling */
+.stream-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  color: #e8e2da;
+  border: 1px solid #e8e2da;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.stream-button:hover {
+  background-color: #e8e2da;
+  color: #0e0b09;
+}
+
+/* Mobile layout: stack vertically */
+@media (max-width: 768px) {
+  .release-section {
+    flex-direction: column; /* stack image on top of text */
+    text-align: center;
+    gap: 30px;
+    padding: 60px 5%;
+  }
+
+  .release-image img {
+    max-width: 90%;
+  }
+}
+        
+
+.band-logo {
+  width: 220px;
+  max-width: 70%;
+  height: auto;
+  position: absolute;       /* take it out of normal flow */
+  top: 80px;                /* distance from top of page */
+  left: 50%;                /* horizontal centering */
+  transform: translateX(-50%); /* perfectly center it */
+  filter: brightness(0) invert(1);
+  border: none;
+  box-shadow: none;
+  z-index: 50;              /* make sure it’s above the background */
+}
+
+@media (max-width: 768px) {
+  .band-logo {
+    width: 180px;
+    top: 70px; /* slightly less space on mobile */
+  }
+}
+              
+    </style>
+</head>
+<body>
+    <div class="background">
+      <div class="navbar">
+        <a href="https://www.instagram.com/caseveti/" target="_blank">
+          <img src="instagramLogo.jpg" alt="Instagram">
+        </a>
+        <a href="https://open.spotify.com/artist/4zC9ETLATVMvx4u4Havmmz?si=pGbVOsxTSEGQ_ZoZpRCBAA" target="_blank">
+          <img src="d-1.png" alt="Spotify">
+        </a>
+        <a href="https://youtube.com/@caseveti?si=BKMLj6JCYACP7Xf7" target="_blank">
+          <img src="download.png" alt="Youtube">
+        </a>
+        <a href="https://www.tiktok.com/@caseveti?is_from_webapp=1&sender_device=pc" target="_blank">
+          <img src="tiktoklogo.png" alt="Tiktok">
+        </a>
+      </div>
+    
+      <div class="content">
+        <img src="Caseveti_Logo_White.png" alt="Caseveti Logo" class="band-logo">
+      </div>
+    </div>
+
+
+    
+    <!-- Hamburger icon -->
+    <span class="hamburger" onclick="toggleNav()">☰</span>
+    
+    <!-- Side navigation drawer -->
+    <div id="sideNavbar" class="side-nav">
+      <a href="index.html">Home</a> <!-- mark this page active -->
+      <a href="music.html">Music</a>
+      <a href="store.html">Store</a>
+      <a href="live.html" class="active">Live</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+
+
+<!--
+<section class="release-section">
+  <div class="release-image">
+    <img src="d-1.png" alt="Album artwork">
+  </div>
+  <div class="release-text">
+    <p>
+      Our debut EP <strong>‘Siren’</strong> is out now. It’s been four years in the making, playing empty rooms, refining our set and landing on these five songs. 
+      This EP was not written to be sold nor was it sanitised in order to appeal — everything is from the heart and nothing came lightly. 
+      Thank you to everyone who’s been coming down to shows and spreading our name. 
+      We hope you find something in this body of work.
+    </p>
+    <a href="https://open.spotify.com/track/741xaJpCPvzR6tfUZVUBkw" target="_blank" class="stream-button">Stream Here</a>
+  </div>
+</section>
+-->
+
+
+
+    
+    <div class="section email-signup">
+        <form action="https://caseveti.us10.list-manage.com/subscribe/post?u=d1e2639f6151168b749b38c43&amp;id=fb26be332a&amp;f_id=0085a4e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <div id="mc_embed_signup_scroll">
+                <h2>Sign up to our mailing list!</h2>
+                
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address</label>
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" placeholder="Enter your email" value="">
+                </div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <!-- real people should not fill this in and expect good things -->
+                    <input type="text" name="b_d1e2639f6151168b749b38c43_fb26be332a" tabindex="-1" value="">
+                </div>
+                <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+<!--
+    <div class="product">
+          <h2>Caseveti T-Shirt</h2>
+          <img src="tiktoklogo.png" alt="Caseveti Band T-Shirt">
+          <p>High-quality band merch with our logo.</p>
+          <p><strong>£20.00</strong></p>
+          <button class="snipcart-add-item"
+            data-item-id="caseveti-tshirt"
+            data-item-name="Caseveti T-Shirt"
+            data-item-price="20.00"
+            data-item-url="/your-shop-page"
+            data-item-description="High-quality Caseveti band t-shirt">
+            Add to Cart
+          </button>
+    </div>
+-->
+
+
+    
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>Want to book us or get in touch? Email us at <a href="mailto:caseveti@gmail.com">caseveti@gmail.com</a>.</p>
+    </div>
+
+    
+
+    
+    
+    <script>
+
+        window.SnipcartSettings = {
+        publicApiKey: "OGNhZDNlNGItNzhmZS00YmI2LTkxMDQtM2NlMWM3NTcwNDUxNjM4NzYwMDM4Nzg5MjY4MzE1", 
+        loadStrategy: "on-user-interaction",
+        currency: "GBP",
+        modalStyle: "side",
+        };
+
+    (function(){
+      var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");
+      var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);
+      var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");
+      var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");
+      var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);
+      var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,
+      f=["focus","mouseover","touchmove","scroll","keydown"];
+      window.LoadSnipcart=o;
+      document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();
+      function r(){
+        window.SnipcartSettings.loadStrategy?
+        window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()
+      }
+      var a=!1;
+      function o(){
+        if(a)return;a=!0;
+        let t=document.getElementsByTagName("head")[0],
+        n=document.querySelector("#snipcart"),
+        i=document.querySelector('script[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),
+        e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));
+        n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),
+        i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),
+        !e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),
+        f.forEach(function(v){return document.removeEventListener(v,o)})
+      }
+      function h(t){
+        !y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,
+        window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),
+        window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),
+        window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),
+        window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))
+      }
+    })();
+
+
+
+        
+let navOpen = false;
+
+function toggleNav() {
+  const nav = document.getElementById("sideNavbar");
+  if (!navOpen) {
+    nav.style.width = "250px"; // open from left
+    navOpen = true;
+  } else {
+    nav.style.width = "0"; // close
+    navOpen = false;
+  }
+}
+
+
+
+
+        
+    </script>
+
+    
+</body>
+</html>
