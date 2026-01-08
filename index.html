@@ -21,14 +21,40 @@
             text-align: center;
         }
 
-        .product img {
-          width: 100%;
-          max-width: 300px;   /* controls how big the shirt appears */
-          height: auto;
-          display: block;
-          margin: 0 auto;
-          border-radius: 4px;
-        }
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 across on mobile */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.product {
+  text-align: center;
+  padding: 1rem;
+}
+
+.product img {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin: 0 auto 0.75rem;
+}
+
+.product h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.product p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.product button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
 
         @media (max-width: 768px) {
             .content h1 {
@@ -447,6 +473,18 @@
     top: 70px; /* slightly less space on mobile */
   }
 }
+
+              @media (min-width: 768px) {
+  .store-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .store-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
               
     </style>
 </head>
@@ -488,23 +526,48 @@
 
 
 
-    <div class="product">
-      <h2>Caseveti Logo T-Shirt</h2>
-      <img src="T-Shirt - Black Halloween 2.jpeg" alt="Caseveti Logo T-Shirt">
-      <p>High-quality band merch with our logo.</p>
-      <p><strong>£25.00</strong></p>
+    <div class="store-grid">
     
-      <button class="snipcart-add-item"
-              data-item-id="caseveti-logo-tee"
-              data-item-name="Caseveti Logo T-Shirt"
-              data-item-price="25.00"
-              data-item-url="https://caseveti.co.uk/store.html"
-              data-item-image="https://caseveti.co.uk/T-Shirt - Black Halloween 2.jpeg"
-              data-item-description="High-quality Caseveti logo t-shirt"
-              data-item-custom1-name="Size"
-              data-item-custom1-options="S|M|L|XL|XXL">
-        Add to Cart
-      </button>
+      <div class="product">
+        <h2>Caseveti Logo T-Shirt</h2>
+        <img src="T-Shirt - Black Halloween 2.jpeg" alt="Caseveti Logo T-Shirt">
+        <p>High-quality band merch with our logo.</p>
+        <p><strong>£25.00</strong></p>
+    
+        <button class="snipcart-add-item"
+                data-item-id="caseveti-logo-tee"
+                data-item-name="Caseveti Logo T-Shirt"
+                data-item-price="25.00"
+                data-item-url="https://caseveti.co.uk/store.html"
+                data-item-image="https://caseveti.co.uk/T-Shirt%20-%20Black%20Halloween.jpeg"
+                data-item-description="High-quality Caseveti logo t-shirt"
+                data-item-custom1-name="Size"
+                data-item-custom1-options="S|M|L|XL|XXL">
+          Add to Cart
+        </button>
+      </div>
+    
+      <!-- Duplicate this .product block for each new t-shirt -->
+
+      <div class="product">
+        <h2>Caseveti Logo T-Shirt</h2>
+        <img src="T-Shirt - Black Halloween 2.jpeg" alt="Caseveti Logo T-Shirt">
+        <p>High-quality band merch with our logo.</p>
+        <p><strong>£25.00</strong></p>
+    
+        <button class="snipcart-add-item"
+                data-item-id="caseveti-logo-tee"
+                data-item-name="Caseveti Logo T-Shirt"
+                data-item-price="25.00"
+                data-item-url="https://caseveti.co.uk/store.html"
+                data-item-image="https://caseveti.co.uk/T-Shirt%20-%20Black%20Halloween%202.jpeg"
+                data-item-description="High-quality Caseveti logo t-shirt"
+                data-item-custom1-name="Size"
+                data-item-custom1-options="S|M|L|XL|XXL">
+          Add to Cart
+        </button>
+      </div>
+    
     </div>
     
 
