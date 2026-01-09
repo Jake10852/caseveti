@@ -23,12 +23,11 @@
 
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  padding: 1rem;
-
-  max-width: 1400px;   /* 👈 key line */
-  margin: 0 auto;     /* 👈 centres the grid */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .product {
@@ -497,12 +496,6 @@
 @media (min-width: 768px) {
   .store-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .store-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
