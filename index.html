@@ -23,10 +23,10 @@
 
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 columns by default */
   gap: 2rem;
-  padding: 2rem;
-  max-width: 1600px;
+  padding: 1.5rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -37,10 +37,11 @@
 
 .product img {
   width: 100%;
-  max-width: 240px;   /* mobile size */
-  height: 240px;
-  object-fit: cover;
-  margin: 0 auto 0.75rem;
+  height: auto;        /* KEY FIX */
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* shows full shirt */
+  max-width: 100%;
+  margin-bottom: 0.75rem;
 }
         
 .product h2 {
@@ -493,9 +494,16 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .store-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
