@@ -43,10 +43,24 @@
   object-fit: cover;
   margin: 0 auto 0.75rem;
 }
-
+        
 .product h2 {
+  font-size: 1.1rem;       /* slightly larger heading */
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.product-description {
+  font-size: 0.9rem;       /* smaller descriptive text */
+  margin: 0.25rem 0 0.5rem;
+  color: #555;             /* subtle gray for description */
+}
+
+.product-price {
   font-size: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 700;        /* bold price */
 }
 
 .product p {
@@ -536,9 +550,9 @@
     
       <div class="product">
         <h2>Caseveti Logo T-Shirt</h2>
+        <p class="product-description">High-quality band merch with our logo. Limited edition Halloween drop.</p>
+        <p class="product-price"><strong>£25.00</strong></p>
         <img src="T-Shirt-BlackHalloween.jpeg" alt="Caseveti Logo T-Shirt">
-        <p>High-quality band merch with our logo.</p>
-        <p><strong>£25.00</strong></p>
     
         <button class="snipcart-add-item"
                 data-item-id="caseveti-logo-tee"
