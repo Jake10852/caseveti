@@ -38,8 +38,8 @@
 
 .product img {
   width: 100%;
-  max-width: 220px;
-  height: 220px;
+  max-width: 260px;   /* was 220 */
+  height: 260px;      /* was 220 */
   object-fit: cover;
   margin: 0 auto 0.75rem;
 }
@@ -503,6 +503,13 @@
 @media (min-width: 1024px) {
   .store-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .product img {
+    max-width: 280px;
+    height: 280px;
   }
 }
               
