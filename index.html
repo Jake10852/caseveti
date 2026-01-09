@@ -502,8 +502,15 @@
 
 @media (max-width: 480px) {
   .store-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 shirts per row */
+    gap: 0.75rem; /* smaller gap between items */
+    padding: 1rem; /* optional: reduces outer spacing */
+  }
+
+  .product img {
+    max-width: 100%;      /* fills the column width */
+    height: auto;         /* keeps natural height */
+    aspect-ratio: 1 / 1;  /* keeps it square */
   }
 }
 
