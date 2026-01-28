@@ -21,61 +21,86 @@
             text-align: center;
         }
 
+/* ===== SHOP ===== */
+
+.shop {
+  padding: 100px 5%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.shop-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 columns by default */
-  gap: 2rem;
-  padding: 1.5rem;
-  max-width: 1400px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .product {
   text-align: center;
-  padding: 1rem;
 }
 
-.product img {
-  width: 105%;
-  height: auto;        /* KEY FIX */
+.product-image {
+  background: #0e0b09;
+  padding: 20px;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 360px;
   aspect-ratio: 1 / 1;
-  object-fit: contain; /* shows full shirt */
-  max-width: none;
-  margin-bottom: 0.75rem;
-  margin-left: -2.5%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
-        
-.product h2 {
-  font-size: 1.1rem;       /* slightly larger heading */
-  margin: 0.5rem 0 0.25rem;
+
+.product:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.product-info {
+  margin-top: 20px;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
   font-weight: 600;
-  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
 }
 
-.product-description {
-  font-size: 0.9rem;       /* smaller descriptive text */
-  margin: 0.25rem 0 0.5rem;
-  color: #555;             /* subtle gray for description */
-}
-
-.product-price {
+.price {
   font-size: 1rem;
-  margin: 0.25rem 0 0.75rem;
-  font-weight: 700;        /* bold price */
+  opacity: 0.8;
+  margin-bottom: 18px;
 }
 
-.product p {
-  font-size: 0.9rem;
-  margin: 0.25rem 0;
-}
-
+/* Button */
 .product button {
-  width: 160px;      /* fixed width */
-  max-width: 100%;   /* never exceed card width */
-  margin: 0.5rem auto 0;
-  display: block;
-  padding: 0.5rem 0;
+  background: transparent;
+  border: 1px solid #e8e2da;
+  color: #e8e2da;
+  padding: 10px 26px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
+
+.product button:hover {
+  background: #e8e2da;
+  color: #0e0b09;
+}
+
 
         @media (max-width: 768px) {
             .content h1 {
