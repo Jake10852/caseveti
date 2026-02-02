@@ -118,21 +118,6 @@
                 max-width: 400px; /* Limit the width to a maximum value */
                 padding: 10px;
             }
-            /* Mobile: make images smaller */
-@media (max-width: 768px) {
-  .store-grid {
-    grid-template-columns: 1fr; /* 1 product per row on mobile */
-    gap: 1rem;                  /* smaller gap between items */
-    padding: 0.5rem;            /* tighter outer spacing */
-  }
-
-  .product img {
-    width: 80%;    /* smaller images on mobile */
-    max-width: 240px; /* limit max width */
-    height: auto;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto; /* center images */
-  }
         }
    
         
@@ -550,14 +535,11 @@
     padding: 0.5rem;           /* optional: tighter outer spacing */
   }
 
-.product img {
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
+  .product img {
+    width: 95%;   /* bigger images */
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
               
     </style>
