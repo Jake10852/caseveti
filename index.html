@@ -537,24 +537,18 @@
 }
 
 
+/* 🔥 HARD OVERRIDE: MOBILE MERCH IMAGE SIZE */
 @media (max-width: 768px) {
-  .store-grid {
-    grid-template-columns: 1fr; /* 1 product per row */
-    gap: 24px;
-    padding: 0;
-  }
-
-  .product img {
-    width: 100%;
-    max-width: 240px;  /* 🔑 THIS controls size on mobile */
-    margin: 0 auto;    /* center image */
-    display: block;
-  }
-
-  .shop {
-    padding: 60px 5%;
+  .store-grid .product img {
+    width: 220px !important;
+    max-width: 220px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
   }
 }
+
               
     </style>
 </head>
