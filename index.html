@@ -525,7 +525,16 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
+              
+/* === FORCE SMALLER PRODUCT IMAGES ON MOBILE === */
+@media (max-width: 768px) {
+  .product img {
+    width: auto;          /* overrides global img { width: 100% } */
+    max-width: 220px;     /* 🔑 actual mobile size */
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 
 @media (max-width: 768px) {
