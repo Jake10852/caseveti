@@ -530,15 +530,20 @@
 
 @media (max-width: 768px) {
   .store-grid {
-    grid-template-columns: 2fr; /* 1 product per row on mobile */
-    gap: 0.5rem;               /* smaller gap between items */
-    padding: 0.5rem;           /* optional: tighter outer spacing */
+    grid-template-columns: 1fr; /* 1 product per row */
+    gap: 24px;
+    padding: 0;
   }
 
   .product img {
-    width: 95%;   /* bigger images */
-    height: auto;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 240px;  /* 🔑 THIS controls size on mobile */
+    margin: 0 auto;    /* center image */
+    display: block;
+  }
+
+  .shop {
+    padding: 60px 5%;
   }
 }
               
